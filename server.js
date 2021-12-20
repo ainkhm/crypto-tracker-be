@@ -10,20 +10,12 @@ app.use(morgan('coins'));
 
 //routes
 app.get('/coins', (req, res) => {
-	const parameter = Object.keys(req.query)[0];
-	const value = Object.values(req.query)[0];
-	console.log(
-		'E',
-		parameter,
-		value,
-		`https://api.coinranking.com/v2/coins?${parameter}=${value}`
-	);
-	const url = `https://api.coinranking.com/v2/coins?${parameter}=${value}`;
+	const url = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=5000`;
 	(async () => {
 		try {
 			await fetch(`${url}`, {
 				headers: {
-					'x-access-token': `62f1e07a06mshb58178b98356480p135ff4jsnbcfab5493d0e`,
+					'x-access-token': `9d63ba22-7a94-48c3-8e5f-2aebfbda7c1d"`,
 				},
 			})
 				.then((response) => response.json())
