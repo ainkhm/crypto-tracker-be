@@ -13,12 +13,12 @@ app.get('/coins', (req, res) => {
 	const parameter = Object.keys(req.query)[0];
 	const value = Object.values(req.query)[0];
 
-	const url = `https://api.coinranking.com/v2/coins?${parameter}=${value}`;
+	const url = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?${parameter}=${value}`;
 	(async () => {
 		try {
 			await fetch(`${url}`, {
 				headers: {
-					'x-access-token': `coinranking2af17fb0b6c75f007ca41c02d47d484ef9e5ed07b6a12e68`,
+					'X-CMC_PRO_API_KEY': `9d63ba22-7a94-48c3-8e5f-2aebfbda7c1d`,
 				},
 			})
 				.then((response) => response.json())
