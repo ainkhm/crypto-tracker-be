@@ -18,7 +18,7 @@ app.get('/coins', (req, res) => {
 		try {
 			await fetch(`${url}`, {
 				headers: {
-					'X-CMC_PRO_API_KEY': `9d63ba22-7a94-48c3-8e5f-2aebfbda7c1d`,
+					'X-CMC_PRO_API_KEY': `53719fb9-5835-478a-a93b-d6a399c91a4a`,
 				},
 			})
 				.then((response) => response.json())
